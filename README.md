@@ -1,16 +1,12 @@
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=3MJE3M4FMJYGN&lc=BR&item_name=Shin%2dNiL%27s%20Github&item_number=Github&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
-
 GodotShare 
 ==========
-This is a share module for [Godot Game Engine](https://godotengine.org/) (2 & 3) for Android & iOS. You'll be able to share text and/or images in your apps.
-
-![Image Sharing Screenshot](/media/screenshot.png "Image Sharing Screenshot")
+This is a light version of the [godot share module](https://github.com/Shin-NiL/Godot-Share) for [Godot Game Engine](https://godotengine.org/) (2 & 3) for Android & iOS. You'll be able to share text and/or images in your apps.
 
 How to use
 ----------
 
 ### Android
-- Drop the "share" directory inside the "modules" directory on the Godot source.
+- Clone inside the "modules" directory on the Godot source.
 - Recompile android export template following the [official instructions](http://docs.godotengine.org/en/latest/reference/compiling_for_android.html#compiling-export-templates).
 In your project goto Export > Target > Android:
 	- Options:
@@ -27,7 +23,7 @@ In your project goto Export > Target > Android:
 If you have more separate by comma.
 
 ### iOS
-- Drop the "share" directory inside the "modules" directory on the Godot source;
+- Clone inside the "modules" directory on the Godot source;
 - Recompile the iOS export template following the [official instructions](http://docs.godotengine.org/en/stable/development/compiling/compiling_for_ios.html).
 - For exporting, follow the [exporting to iOS official documentation](http://docs.godotengine.org/en/stable/learning/workflow/export/exporting_for_ios.html). 
 
