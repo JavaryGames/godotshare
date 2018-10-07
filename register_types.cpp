@@ -11,7 +11,7 @@
 
 #include "ios/src/godotShare.h"
 
-void register_share_types() {
+void register_godotshare_types() {
 #if VERSION_MAJOR == 3
     Engine::get_singleton()->add_singleton(Engine::Singleton("GodotShare", memnew(GodotShare)));
 #else
@@ -19,5 +19,5 @@ void register_share_types() {
 #endif
 }
 
-void unregister_share_types() {
+void unregister_godotshare_types() {
 }
