@@ -25,23 +25,11 @@ void GodotShare::shareText(const String &title, const String &subject, const Str
     
     UIActivityViewController * avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
     
+    // The following is required to prevent a crash on iPad
     if ( [avc respondsToSelector:@selector(popoverPresentationController)] ) {
         // iOS8
         avc.popoverPresentationController.sourceView = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).window;
     }
-    
-//    //if iPhone
-//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-//
-//        [self presentViewController:controller animated:YES completion:nil];
-//        [root_controller presentViewController:avc animated:YES completion:nil];
-//    }
-//    //if iPad
-//    else {
-//        // Change Rect to position Popover
-//        UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:controller];
-//        [popup presentPopoverFromRect:CGRectMake(avc.view.frame.size.width/2, root_controller.view.frame.size.height/4, 0, 0)inView:avc.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-//    }
     
     [root_controller presentViewController:avc animated:YES completion:nil];
 
@@ -58,6 +46,12 @@ void GodotShare::sharePic(const String &path, const String &title, const String 
     NSArray * shareItems = @[message, image];
     
     UIActivityViewController * avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
+    
+    // The following is required to prevent a crash on iPad
+    if ( [avc respondsToSelector:@selector(popoverPresentationController)] ) {
+        // iOS8
+        avc.popoverPresentationController.sourceView = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).window;
+    }
     
     [root_controller presentViewController:avc animated:YES completion:nil];
 }
