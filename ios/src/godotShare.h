@@ -1,8 +1,8 @@
 #ifndef GODOT_SHARE_H
 #define GODOT_SHARE_H
 
-#include <version_generated.gen.h>
-#include "reference.h"
+#include <core/version_generated.gen.h>
+#include "core/reference.h"
 
 class GodotShare : public Reference {
 #if VERSION_MAJOR == 3
